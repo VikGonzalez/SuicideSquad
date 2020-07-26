@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Set Body Family Font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Set Headers as Bold */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* Set Height */
+.height-top-down {
+    padding: 100px 0;
+}
+
+/* Set Scrollbar */
+.sps--abv {
+    background-color: transparent;
+    color: #000000;
+}
+
+.sps--blw {
+    background-color: #2b2b2b;
+    color: #fff
+}
+
+nav.sps--abv .logo {
+    width: 80px;
+}
+
+/* Set logo */
+.logo {
+    width: 50px;
+    padding: 5px 0;
+}
+/* Set Icon Social Media size */
+.iconsSM {
+    width: 20px;
+    margin: 10px 5;
+}
+
+/* Set Carousel */
+.carousel-caption {
+    position: absolute;
+    top: 80%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.btn-light {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #fafafa;
+    border: 20px solid #fff;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* infography */
+.infography {
+    position: relative;
+    top: 600px;
+    left: 200px;
+    /* overflow: hidden; */
+    margin: 10px 10;
+    border-radius: 5px;
+    position: static;
+    bottom: 1250px;
+    z-index: 9000;
+    padding-left: 00px;
+    padding-top: 50px;
+    display: inline-block;
+    width: 900px;
+    height: 1000px;
+
+}
+
+
+/* CREATE & SET COMPARISON CONTAINER */
+.comparison-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+.comparison-details {
+    position: static;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+
+/* SET IMAGE TRANSITION */
+.slider-container:hover img {
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/* SET IMAGE EFFECT */
+.comparison-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.slider-details h2 {
+    margin-bottom: 40px;
+}
+
+.slider-details a h2, .comparison-details a p {
+    color: rgb(104, 18, 61);
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+/* Set Comparison Page */
+.header-comparison {
+    padding:  150px 0 100px 0;
+    background-image: url("Resources/banner-pexels.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.header-comparison {
+    color: red;
+}
+
+.white-text {
+    color: whitesmoke;    
+}
+
+.header-comparison {
+    padding: 150px 0 100px 0;
+    background-image: url(Resources/video-banner-dark.jpg);
+    background-position: center center;
+    background-size: unset;
+}
+
+.slider-comparison h1, .header-comparison h2 {
+    color: black;
+}
+
+footer {
+    background-color:rgb(27, 27, 31);
+    padding: 0px 20;
+    text-align: center;
+}
+
+footer.logo {
+    width: 20px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+
+#Suicide_Analysis {
+  border-radius: 8px;
+}
+
+.chart::before {
+  position: relative;
+  top: 400px;
+  left: 300px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-image: url("Resources/purple-petaled-flowers-near-black-book-2228552.jpg");
+  background-repeat: no-repeat;
+  background-position: 10% 100;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.tooltip {
+  position: absolute;
+  width: 135px;
+  height: 60px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  color: white;
+  text-align: center;
+  background: #551aaf;
+  border: 0;
+  border-radius: 10px;
+}
+
+.axis-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: #551aaf;
+  text-anchor: middle;
+}
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  fill: #551aaf;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #551aaf;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #e75480;
+  cursor: pointer;
+}
+
+
