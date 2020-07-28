@@ -188,6 +188,10 @@ footer p {
   opacity: 0.3;
 }
 
+#graphicBody {
+    margin-top: 120px;
+}
+/* 
 .tooltip {
   position: absolute;
   width: 135px;
@@ -200,9 +204,9 @@ footer p {
   background: #551aaf;
   border: 0;
   border-radius: 10px;
-}
+} */
 
-.axis-text {
+/* .axis-text {
   font-family: sans-serif;
   font-weight: bold;
   fill: #551aaf;
@@ -227,6 +231,6 @@ footer p {
 .inactive:hover {
   fill: #e75480;
   cursor: pointer;
-}
+} */
 
 
