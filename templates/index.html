@@ -1,116 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		 <!-- Bootstrap CSS -->
-		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		<title>Suicide Data Visualizations</title>
-		<!-- Link Style Sheet -->
-		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-		<!-- Import D3 -->
-		<script src="https://d3js.org/d3.v5.min.js"></script>	
-	</head>
-    <!-- Set Body -->
-	<body>
-        <!-- Import Navbar from Bootstrap -->
-        <!-- Set dark navbar -->
-        <!-- Stick Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top sps sps--abv">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"> 
-                    <img class="logo" src="../resources/Images/logos/Suicide Awareness Logo.png" alt="">
-				</a>
-				<h1>Suicide Analysis 1987-2014</h1>
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Set Pages -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                        </li>
-						<li class="nav-item">
-							<a class="nav-link" href="map.html">Map</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="graphic.html">Graphic</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="slider.html">Slider</a>
-						</li>
-                        <!-- Set Dropdown Page Menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Plots
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="MexicoSuicideFemalesRate.html">Mexico Female Rate</a>
-                                <a class="dropdown-item" href="MexicoSuicideFemalesCorrelation.html">Mexico Female Correlation</a>
-                                <a class="dropdown-item" href="MexicoSuicideFemalesDistribution.html">Mexico Female Distribution</a>
-                                <a class="dropdown-item" href="MexicoSuicideFemalesOutliers.html">Mexico Female Outliers</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gethelp.html">Get Help</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<title>Suicide Data Visualizations</title>
+	<!-- Link Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<!-- Import D3 -->
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<!-- Set Body -->
+
+<body>
+	<!-- Import Navbar from Bootstrap -->
+	<!-- Set dark navbar -->
+	<!-- Stick Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top sps sps--abv">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<img class="logo" src="../resources/Images/logos/Suicide Awareness Logo.png" alt="">
+			</a>
+			<h1>Suicide Analysis 1987-2014</h1>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Set Pages -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">Map</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="graphic.html">Graphic</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="slider.html">Slider</a>
+					</li>
+					<!-- Set Dropdown Page Menu -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Plots
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="MexicoSuicideFemalesRate.html">Mexico Female Rate</a>
+							<a class="dropdown-item" href="MexicoSuicideFemalesCorrelation.html">Mexico Female
+								Correlation</a>
+							<a class="dropdown-item" href="MexicoSuicideFemalesDistribution.html">Mexico Female
+								Distribution</a>
+							<a class="dropdown-item" href="MexicoSuicideFemalesOutliers.html">Mexico Female Outliers</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gethelp.html">Get Help</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<!-- Set Main Section -->
 	<main>
 		<!-- Set Summary Section-->
 		<section class="height-top-down"></section>
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-sm-6">
-						<img class="img-fluid w-100 shadow-lg"  src="../resources/Images/Images/infografía_OMS.png" alt="Screen">
-					</div>
-					<div class="col-12 col-sm-6">
-						<h2>Summary</h2>
-						<p>The purpose of this project is to present global suicide data collected by WHO from 1987 to 2014 and its evolution in time. To accomplish this analysis, we put first pulled data from the World Health Organization and assembled a dataset on over 75 countries.</p>
-						<p>Although more women attempt suicide, about four times as many men as women die from their suicide attempt. The reason for this is that men generally use more lethal means such as firearms, hanging, or asphyxiation (suffocation). Women often use drug overdoses or asphyxiation, or they cut themselves. Firearms are used in about 30% of all suicides. Of all deaths that involve firearms, about 80% are estimated to be suicides.
-							Certain groups have disproportionately high suicide rates compared to the general population:
-							adolescents - in , suicide accounts for 24% of all death among people who are 15 to 24 years of age
-							young men between the ages of 20 and 24
-							senior men over the age of 80
-							prison inmates, for whom suicide is the leading cause of death
-							people of First Nations and Inuit descent, who have suicide rates 3 to 6 times greater than the national average; this is even higher for adolescents 15 to 19 years old, with suicide occurring up to 7 times more frequently than for other youths
-							people with prior histories of attempted suicide</p>
-						<p>After assembling the dataset, we saw an alarming increase of suicides in female gender in Mexico.</p>
-						<p>See more details at Plots area</p>
-					</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<img class="img-fluid w-100 shadow-lg" src="../resources/Images/Images/infografía_OMS.png"
+						alt="Screen">
 				</div>
-			</div>   
+				<div class="col-12 col-sm-6">
+					<h2>Summary</h2>
+					<p>The purpose of this project is to present global suicide data collected by WHO from 1987 to 2014
+						and its evolution in time. To accomplish this analysis, we put first pulled data from the World
+						Health Organization and assembled a dataset on over 75 countries.</p>
+					<p>Although more women attempt suicide, about four times as many men as women die from their suicide
+						attempt. The reason for this is that men generally use more lethal means such as firearms,
+						hanging, or asphyxiation (suffocation). Women often use drug overdoses or asphyxiation, or they
+						cut themselves. Firearms are used in about 30% of all suicides. Of all deaths that involve
+						firearms, about 80% are estimated to be suicides.
+						Certain groups have disproportionately high suicide rates compared to the general population:
+						adolescents - in , suicide accounts for 24% of all death among people who are 15 to 24 years of
+						age
+						young men between the ages of 20 and 24
+						senior men over the age of 80
+						prison inmates, for whom suicide is the leading cause of death
+						people of First Nations and Inuit descent, who have suicide rates 3 to 6 times greater than the
+						national average; this is even higher for adolescents 15 to 19 years old, with suicide occurring
+						up to 7 times more frequently than for other youths
+						people with prior histories of attempted suicide</p>
+					<p>After assembling the dataset, we saw an alarming increase of suicides in female gender in Mexico.
+					</p>
+					<p>See more details at Plots area</p>
+				</div>
+			</div>
+		</div>
 		</section>
-	</main>            
+	</main>
 	<!-- Set Footer -->
-        <!-- Include Social Media Icons -->
-        <section class="height-top-down"></section>
-        <footer>
-            <img class="logo" src="../resources/Images/logos/Suicide Awareness Logo.png" alt="logo">
-				<br>
-					<p>GET HELP</p>
-					<p>01-800-LETSTALK</p>
-						<img class="iconsSM" src="../resources/Images/logos/facebook-logo-button.svg" alt="Facebook">
-						<img class="iconsSM" src="../resources/Images/logos/instagram-logo.svg" alt="Instagram">
-						<img class="iconsSM" src="../resources/Images/logos/twitter-logo-button.svg" alt="Twitter">
-					<br> 
-					<br>
-					<br>
-					<p>  © Copyright Data Bootcamp 2020</p>
-					<br>
-        </footer>
-		<!-- import D3 tips -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-		<script type="text/javascript" src="../static/js/app.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <!-- Set Menu Scroll -->
-        <script src="../static/js/scrollPosStyler.min.js"></script>
-  </body>
+	<!-- Include Social Media Icons -->
+	<section class="height-top-down"></section>
+	<footer>
+		<img class="logo" src="../resources/Images/logos/Suicide Awareness Logo.png" alt="logo">
+		<br>
+		<p>GET HELP</p>
+		<p>01-800-LETSTALK</p>
+		<img class="iconsSM" src="../resources/Images/logos/facebook-logo-button.svg" alt="Facebook">
+		<img class="iconsSM" src="../resources/Images/logos/instagram-logo.svg" alt="Instagram">
+		<img class="iconsSM" src="../resources/Images/logos/twitter-logo-button.svg" alt="Twitter">
+		<br>
+		<br>
+		<br>
+		<p> © Copyright Data Bootcamp 2020</p>
+		<br>
+	</footer>
+	<!-- import D3 tips -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+	<script type="text/javascript" src="../static/js/app.js"></script>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<!-- Set Menu Scroll -->
+	<script src="../static/js/scrollPosStyler.min.js"></script>
+</body>
+
 </html>
