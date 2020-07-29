@@ -9,7 +9,7 @@
 		<!-- Link Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 		<!-- Import D3 -->
-		<script src="https://d3js.org/d3.v5.min.js"></script>	
+        <link rel="stylesheet" href="../static/css/graphicD3Style.css">
 	</head>
 
 	<body>
@@ -59,12 +59,51 @@
                 </div>
             </div>
         </nav>
-
-
-             <!-- Set chart  -->
-	<div class="container"> 
-		<div class="chart">
-    </div> 
+    <!-- START OF GRAPHIC SPECIFIC -->
+    <main id="graphicBody">
+    <section>
+    <div class="container ml-4 mb-3">
+        <div class="row">
+            <div class="col-12">
+                    <h3>Suicide rates: time, money & happiness</h3>
+                    <hr style="border-color: gray;">
+                    <p  style="margin-top: 1rem; margin-bottom: 0">Suicide rates have varied over time. To quantify where the changes are occuring, suicide data is decomposed into age-standardized groups. Select a country from the drop-down list to see historical trends as they impact males & females of different age groups. Also, are overall happiness and financial earnings valid predictors of sucide rates? In the bottom graph, see how latest national suicide rates relate to gross domestic product (GDP) (per capita, in USD) and their scores in the latest World Happiness Report.<hr></p>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card mb-3" style="border: none;">
+                <div class="card-body align-items-center justify-content-center p-1" >
+                <p class="card-title" style="font-weight: bold; margin-bottom: 0;">Select a country:</p>
+                <select id="selDataset" style="background-color: rgba(246, 62, 2, 1.0);color: #fafafa;">
+                  </select>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container ml-4 my-3"">
+        <div class="row justify-content-center ">
+            <div class="col">
+                <div id="linePlot">
+                    <!-- We append our D3 line chart here. -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="border-color: gray; border-width: 2px;">
+    <div class="container ml-4 my-4">
+        <div class="row justify-content-center my-3">
+            <div class="col-10">
+                    <div id="bubble">
+                        <!-- We append our Plotly bubble chart here. -->
+                    </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    </main>
+    <!-- END OF GRAPHIC SPECIFIC -->
 
 	<!-- Set Footer -->
         <!-- Include Social Media Icons -->
@@ -84,8 +123,11 @@
                 <br>
         </footer>
 		<!-- import D3 tips -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-		<script type="text/javascript" src="../static/js/app.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="../static/js/d3_timeplot.js"></script>
+        <script type="text/javascript" src="../static/js/plotly_bubble.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
