@@ -51,16 +51,6 @@ let overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
 
-// Load in GeoJson data
-// var geoData = "world_map.geojson";
-// let world_map = L.geoJson(worldjson).addTo(myMap)
-// L.geoJson(worldjson).addTo(myMap)
-
-// var geojson;
-
-// d3.json(world_map, data => {
-// console.log("All features",data.features);
-// console.log("One feature",data.features[0]);
 
 function getColor(rate) {
   return rate > 30 ? '#4d004b' :
@@ -112,11 +102,7 @@ function resetHighlight(e) {
   info.update();
 }
 
-// function addPopup(feature, layer) {
-//   var popupContent = `<h4>Country: ${feature.properties.Country}</h4> <hr> <p>Latest year of recorded data: ${feature.properties.year}</p><p>Suicide Rate: ${feature.properties.SuicideRate}</p>`;
-//   layer.bindPopup(popupContent);
 
-// }
 
 function onEachFeature(feature, layer) {
   layer.on({
