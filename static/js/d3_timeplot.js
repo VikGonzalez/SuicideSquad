@@ -38,7 +38,6 @@ function makeResponsive() {
       .attr("height", svgHeight)
       .attr("width", svgWidth);
 
-    // Append the legend (circles and text)
     svg.append("circle").attr("cx",svgWidth-220).attr("cy",20).attr("r", 6).style("fill", color[0])
     svg.append("circle").attr("cx",svgWidth-220).attr("cy",40).attr("r", 6).style("fill", color[1])
     svg.append("circle").attr("cx",svgWidth-220).attr("cy",60).attr("r", 6).style("fill", color[2])
@@ -67,16 +66,6 @@ function makeResponsive() {
     // ///////////////////////////////////
     // // Create all required functions
     // ///////////////////////////////////
-
-    // Function grabs a year (n) and adds a specified # of years to it (dt)
-    function add_years(dt,n) {
-      return new Date(dt.setFullYear(dt.getFullYear() + n));      
-    }
-
-    // Function grabs a year (n) and subtracts a specified # of years from it (dt)
-    function minus_years(dt,n) {
-      return new Date(dt.setFullYear(dt.getFullYear() - n));      
-    }
     
     // function used for updating yAxis var upon click on axis label
     function renderYaxes(newYScale, yAxis) {
@@ -89,7 +78,6 @@ function makeResponsive() {
       return yAxis;
     };
     
-    // Finds unique values in a passed array
     const unique = (value, index, self) => {
       return self.indexOf(value) === index
     }
@@ -98,16 +86,9 @@ function makeResponsive() {
     // // Read CSV and create plot
     // ///////////////////////////////////
 
-// Passing a string with format Year
-// can also do %Y-%m-%d
-let parseTime = d3.timeParse("%Y");
-
-// Initially populate the D3 plot
 function init() {
     d3.json("../../Data/suicide_data.json").then(function(sData, err) {
        if (err) throw err;
-
-       //Initialize arrays of countries and their ISO 3 codes
         let list_of_countries = [];
         let list_of_codes = [];
           sData.forEach(data => {
@@ -115,13 +96,12 @@ function init() {
             list_of_codes.push(data.code)
             });
 
-        // to deal with responsive function, remove drop-down items (to prevent appending list over and over again)
-        let countryArea = d3.select("#selDataset").selectAll("option")
-        if (!countryArea .empty()) {
-          countryArea .remove();
-        };
 
-          // Get value of selected country from drop down menu       
+          let countryArea = d3.select("#selDataset").selectAll("option")
+          if (!countryArea .empty()) {
+            countryArea .remove();
+          };
+
           let countrySel = d3.select("#selDataset");
           uniqueCountries = list_of_countries.filter(unique)
           uniqueCodes = list_of_codes.filter(unique)
@@ -130,20 +110,17 @@ function init() {
             countrySel.append("option").property("value",uniqueCodes[i]).text(uniqueCountries[i].substring(0,32));
           }
 
-          // Get data for specified country
           let countryData = [];
           let country_code = d3.select("#selDataset").property('value');
+
            sData.forEach(data => {
-             data.year = parseTime(data.year.toString())
              if (data.code === country_code) {
               countryData.push(data)
              }
            });
 
-        //Initialize historical json for specified country
         let cData = [];
 
-        // Construct age specific arrays
         countryData.forEach(data => {
           let yData = {};
           yData["year"] = data.year
@@ -175,8 +152,7 @@ function init() {
           cData.push(yData);
           return availGrps
         });
-
-        //Determine maximum values for every age group
+        
         maxs5_14 = d3.max(cData,d=> d['s5_14']);
         maxs15_24 = d3.max(cData,d=> d['s15_24']);
         maxs25_34 = d3.max(cData,d=> d['s25_34']);
@@ -184,19 +160,13 @@ function init() {
         maxs55_74 = d3.max(cData,d=> d['s55_74']);
         maxs75 = d3.max(cData,d=> d['s75plus']);
 
-        //Determine gloabl max of data to plot
         yMAX = Math.max(maxs5_14,maxs15_24,maxs25_34,maxs35_54,maxs55_74,maxs75)
 
-        // Determine time range to plot
         years = d3.extent(cData,d=> d.year);
 
-        // Pad years to plot
-        let extraYr = add_years(years[1],1);
-        let lessYr = minus_years(years[0],1);
-
         //Create x and y linear scales
-        let xTimeScale = d3.scaleTime()
-        .domain([lessYr,extraYr])
+        let xLinearScale = d3.scaleLinear()
+        .domain(years)
         .range([0, width]);
 
         let yLinearScale = d3.scaleLinear()
@@ -204,20 +174,19 @@ function init() {
         .range([height, 0]);
     
         // // create axes
-        let bottomAxis = d3.axisBottom(xTimeScale);
+        let bottomAxis = d3.axisBottom(xLinearScale).tickFormat(d3.format("d"));;
         let leftAxis = d3.axisLeft(yLinearScale);
     
         // append axes
         let xAxis= chartGroup.append("g")
           .classed("x-axis",true)
           .attr("transform", `translate(0, ${height})`)
-          .call(bottomAxis);
+          .call(bottomAxis)
     
         let yAxis= chartGroup.append("g")
           .classed("y-axis",true)
           .call(leftAxis);
-
-        //Create plot axes group
+    
         let xLabelsGroup = chartGroup.append("g")
         .attr("transform", `translate(${width / 2}, ${height + 20})`);
     
@@ -249,7 +218,6 @@ function init() {
         .classed("inactive", true)
         .text("MALE suicide rate (per 100K)");
 
-        // Add title to plot
         let countryName = countryData[0].country;
         let title = svg.append("text")
         .classed("title",true)
@@ -262,32 +230,35 @@ function init() {
         .style("text-decoration", "underline")  
         .text(`Historical suicide data for ${countryName} (${country_code})`)
 
-        // Line generator for suicide data
+        // Line generator for morning data
+
         let line1 = d3.line()
-          .x(d => xTimeScale(d.year))
+          .defined(d => !isNaN(d.s5_14)) //removes NAN values
+          .x(d => xLinearScale(d.year))
           .y(d => yLinearScale(d.s5_14));
 
         let line2 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s15_24));
 
         let line3 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s25_34));
 
         let line4 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s35_54));
 
         let line5 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s55_74));
 
         let line6 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s75plus));
 
-        // Render lines
+        // Append a path for line1
+
         let linesGroup = chartGroup.append("g")
 
         linesGroup
@@ -320,15 +291,13 @@ function init() {
         .attr("d", line6(cData))
         .classed("line s75plus", true); 
 
-        // Create tooltip function
         let toolTip = d3.tip()
         .attr("class", "tooltip")
         .offset([150, 70])
         .html(function(d) {
-          return (`<strong>${country_code}</strong><br>(data from: ${d.year.getFullYear()})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
+          return (`<strong>${country_code}</strong><br>(data from: ${d.year})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
         });
 
-        // Create circles 
         let circlesGroup = chartGroup.selectAll("circle")
         .data(cData)
         .enter()
@@ -337,15 +306,15 @@ function init() {
        circlesGroup
        .append("circle")
         .attr("id","s5_14")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s5_14))
-        .attr("r", "3")
+        .attr("r", function(d) { return d.s5_14 == undefined ? 0 : 3; })
         .attr("fill", color[0]);
 
         circlesGroup
         .append("circle")
         .attr("id","s15_24")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s15_24))
         .attr("r", "3")
         .attr("fill", color[1]);
@@ -353,7 +322,7 @@ function init() {
         circlesGroup
         .append("circle")
         .attr("id","s25_34")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s25_34))
         .attr("r", "3")
         .attr("fill", color[2]);
@@ -361,7 +330,7 @@ function init() {
         circlesGroup
         .append("circle")
         .attr("id","s35_54")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s35_54))
         .attr("r", "3")
         .attr("fill", color[3]);
@@ -369,7 +338,7 @@ function init() {
         circlesGroup
         .append("circle")
         .attr("id","s55_74")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s55_74))
         .attr("r", "3")
         .attr("fill", color[4]);
@@ -377,14 +346,14 @@ function init() {
         circlesGroup
         .append("circle")
         .attr("id","s75plus")
-        .attr("cx", d => xTimeScale(d.year))
+        .attr("cx", d => xLinearScale(d.year))
         .attr("cy", d => yLinearScale(d.s75plus))
         .attr("r", "3")
         .attr("fill", color[5]);
         
         circlesGroup.call(toolTip);
 
-        //Create "mouseover" event listener to display tooltip
+        // Step 2: Create "mouseover" event listener to display tooltip
         circlesGroup.on("mouseover",d=>{
           toolTip.show(d,this)
         }).on("mouseout", (d,i)=> {
@@ -395,14 +364,14 @@ function init() {
       yLabelsGroup.selectAll("text")
       .on("click", function() {
     
-        // get value of y-axis selection
+        // get value of selection
         let Yvalue = d3.select(this).attr("value");
         if (Yvalue !== selYaxis) {
     
           // Get value of selected y-axis
           selYaxis = Yvalue;
 
-          // construct data for selected y-axis (male or female)
+          let mData = [];
 
           countryData.forEach(data => {
             let yData = {};
@@ -449,10 +418,12 @@ function init() {
           .domain([0,mMAX])
           .range([height, 0]);
       
-          bottomAxis = d3.axisBottom(xTimeScale);
+          // // create axes
+          bottomAxis = d3.axisBottom(xLinearScale);
           leftAxis = renderYaxes(yLinearScale, yAxis);
 
-          line1.y(d => yLinearScale(d.s5_14));
+          line1.y(d => yLinearScale(d.s5_14))
+          .defined(d => !isNaN(d.s5_14)) //removes NAN values;
           linesGroup
           .transition()
           .duration(1000)
@@ -499,6 +470,7 @@ function init() {
           .transition()
           .duration(1000)
           .attr("cy", d => yLinearScale(d.s5_14))
+          .attr("r", function(d) { return d.s5_14 == undefined ? 0 : 3; })
 
           circlesGroup.select("#s15_24")
           .data(mData)
@@ -546,11 +518,12 @@ function init() {
           let toolTip = d3.tip()
           .attr("class", "tooltip")
           .html(function(d) {
-            return (`<strong>${country_code}</strong><br>(data from: ${d.year.getFullYear()})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
+            return (`<strong>${country_code}</strong><br>(data from: ${d.year})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
           });
 
           circlesGroup.data(mData).call(toolTip);
 
+          // Step 2: Create "mouseover" event listener to display tooltip
           circlesGroup.on("mouseover",d=>{
             toolTip.show(d,this)
             .style('top', (d3.event.pageY + 10)+'px')
@@ -588,25 +561,22 @@ function init() {
   }); //end of y-axis listener
     
   }); //end of JSON read
-}; // end of init function
+}; // end of init
 
-// Call init function to initialize plot upon loading HTML
 init()
 
-// Create fucntion to plot data from selected country (as specified by dropdown)
 function optionChanged() {
   d3.json("../../Data/suicide_data.json").then(function(sData, err) {
      if (err) throw err;
 
         let countryData = [];
         let country_code = d3.select("#selDataset").property('value');
-        console.log(country_code)
+
          sData.forEach(data => {
-           data.year = parseTime(data.year.toString())
-           if (data.code === country_code) {
+          if (data.code === country_code) {
             countryData.push(data)
            }
-         });
+          });
 
       let cData = [];
 
@@ -654,24 +624,21 @@ function optionChanged() {
 
       years = d3.extent(cData,d=> d.year);
 
-      let extraYr = add_years(years[1],1);
-      let lessYr = minus_years(years[0],1);
-
       let chartArea = d3.select("#linePlot").select("svg").select(".chartGroup");
     
-      // Clear chart to remove old data (pfrevents repetitive overlays)
+      // Clear svg is not empty
       if (!chartArea.empty()) {
         chartArea.remove();
       };
 
-      // Append group element
+            // Append group element
       let chartGroup = svg.append("g")
       .classed("chartGroup",true)
       .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
 
       //Create x and y linear scales
-      let xTimeScale = d3.scaleTime()
-      .domain([lessYr,extraYr])
+      let xLinearScale = d3.scaleLinear()
+      .domain(years)
       .range([0, width]);
 
       let yLinearScale = d3.scaleLinear()
@@ -679,7 +646,7 @@ function optionChanged() {
       .range([height, 0]);
   
       // // create axes
-      let bottomAxis = d3.axisBottom(xTimeScale);
+      let bottomAxis = d3.axisBottom(xLinearScale).tickFormat(d3.format("d"));
       let leftAxis = d3.axisLeft(yLinearScale);
   
       // append axes
@@ -692,10 +659,10 @@ function optionChanged() {
         .classed("y-axis",true)
         .call(leftAxis);
 
-      // FRemove old title and add a new one
+
       let titleArea = d3.select("#linePlot").select("svg").select(".title");
   
-      // Clear title area if not empty
+      // Clear svg is not empty
       if (!titleArea.empty()) {
         titleArea.remove();
       };
@@ -743,32 +710,34 @@ function optionChanged() {
       .classed("inactive", true)
       .text("MALE suicide rate (per 100K)");
 
-      // Line generator 
+      // Line generator for morning data
       let line1 = d3.line()
-        .x(d => xTimeScale(d.year))
+        .defined(d => !isNaN(d.s5_14)) //removes NAN values
+        .x(d => xLinearScale(d.year))
         .y(d => yLinearScale(d.s5_14));
 
       let line2 = d3.line()
-      .x(d => xTimeScale(d.year))
+      .x(d => xLinearScale(d.year))
       .y(d => yLinearScale(d.s15_24));
 
       let line3 = d3.line()
-      .x(d => xTimeScale(d.year))
+      .x(d => xLinearScale(d.year))
       .y(d => yLinearScale(d.s25_34));
 
       let line4 = d3.line()
-      .x(d => xTimeScale(d.year))
+      .x(d => xLinearScale(d.year))
       .y(d => yLinearScale(d.s35_54));
 
       let line5 = d3.line()
-      .x(d => xTimeScale(d.year))
+      .x(d => xLinearScale(d.year))
       .y(d => yLinearScale(d.s55_74));
 
       let line6 = d3.line()
-      .x(d => xTimeScale(d.year))
+      .x(d => xLinearScale(d.year))
       .y(d => yLinearScale(d.s75plus));
 
-      // Render lines
+      // Append a path for line1
+
       let linesGroup = chartGroup.append("g")
 
       linesGroup
@@ -805,7 +774,7 @@ function optionChanged() {
       .attr("class", "tooltip")
       .offset([150, 70])
       .html(function(d) {
-        return (`<strong>${country_code}</strong><br>(data from: ${d.year.getFullYear()})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
+        return (`<strong>${country_code}</strong><br>(data from: ${d.year})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
       });
 
       let circlesGroup = chartGroup.selectAll("circle")
@@ -816,15 +785,16 @@ function optionChanged() {
      circlesGroup
      .append("circle")
       .attr("id","s5_14")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s5_14))
-      .attr("r", "3")
-      .attr("fill", color[0]);
+      .attr("r", function(d) { return d.s5_14 == undefined ? 0 : 3; })
+      .attr("fill", color[0])
+
 
       circlesGroup
       .append("circle")
       .attr("id","s15_24")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s15_24))
       .attr("r", "3")
       .attr("fill", color[1]);
@@ -832,7 +802,7 @@ function optionChanged() {
       circlesGroup
       .append("circle")
       .attr("id","s25_34")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s25_34))
       .attr("r", "3")
       .attr("fill", color[2]);
@@ -840,7 +810,7 @@ function optionChanged() {
       circlesGroup
       .append("circle")
       .attr("id","s35_54")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s35_54))
       .attr("r", "3")
       .attr("fill", color[3]);
@@ -848,7 +818,7 @@ function optionChanged() {
       circlesGroup
       .append("circle")
       .attr("id","s55_74")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s55_74))
       .attr("r", "3")
       .attr("fill", color[4]);
@@ -856,23 +826,25 @@ function optionChanged() {
       circlesGroup
       .append("circle")
       .attr("id","s75plus")
-      .attr("cx", d => xTimeScale(d.year))
+      .attr("cx", d => xLinearScale(d.year))
       .attr("cy", d => yLinearScale(d.s75plus))
       .attr("r", "3")
       .attr("fill", color[5]);
       
       circlesGroup.call(toolTip);
 
+      // Step 2: Create "mouseover" event listener to display tooltip
       circlesGroup.on("mouseover",d=>{
         toolTip.show(d,this)
       }).on("mouseout", (d,i)=> {
         toolTip.hide(d)
       });
 
+    // y axis labels event listener
     yLabelsGroup.selectAll("text")
     .on("click", function() {
   
-      // get value of male vs. female selection
+      // get value of selection
       let Yvalue = d3.select(this).attr("value");
       if (Yvalue !== selYaxis) {
   
@@ -926,10 +898,12 @@ function optionChanged() {
         .domain([0,mMAX])
         .range([height, 0]);
     
-        bottomAxis = d3.axisBottom(xTimeScale);
+        // // create axes
+        bottomAxis = d3.axisBottom(xLinearScale);
         leftAxis = renderYaxes(yLinearScale, yAxis);
 
-        line1.y(d => yLinearScale(d.s5_14));
+        line1.y(d => yLinearScale(d.s5_14))
+        .defined(d => !isNaN(d.s5_14)); //removes NAN values;
         linesGroup
         .transition()
         .duration(1000)
@@ -976,6 +950,7 @@ function optionChanged() {
         .transition()
         .duration(1000)
         .attr("cy", d => yLinearScale(d.s5_14))
+        .attr("r", function(d) { return d.s5_14 == undefined ? 0 : 3; })
 
         circlesGroup.select("#s15_24")
         .data(mData)
@@ -1023,11 +998,12 @@ function optionChanged() {
         let toolTip = d3.tip()
         .attr("class", "tooltip")
         .html(function(d) {
-          return (`<strong>${country_code}</strong><br>(data from: ${d.year.getFullYear()})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
+          return (`<strong>${country_code}</strong><br>(data from: ${d.year})<hr>Suicide rates (${selYaxis})<hr>Age 5-14: ${d.s5_14}<br>Age 15-24: ${d.s15_24}<br>Age 25-34: ${d.s25_34}<br>Age 35-54: ${d.s35_54}<br>Age 55-74: ${d.s55_74}<br>Age 75+: ${d.s75plus}`);
         });
 
         circlesGroup.data(mData).call(toolTip);
 
+        // Step 2: Create "mouseover" event listener to display tooltip
         circlesGroup.on("mouseover",d=>{
           toolTip.show(d,this)
           .style('top', (d3.event.pageY + 10)+'px')
@@ -1066,8 +1042,6 @@ function optionChanged() {
   
 }); //end of JSON read
 }; // end of init
-
-// If a new country is selected, executed optionChanged function
 d3.select("#selDataset").on("change",optionChanged);
     } //end of responsive function
     
