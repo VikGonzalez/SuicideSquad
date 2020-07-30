@@ -1,12 +1,3 @@
-// Creating map object
-var myMap = L.map("world-map", {
-  center: [35.866667, -15.566667],
-  zoom: 1.5,
-  dragging: false,
-  scrollWheelZoom: false,
-  zoomControl: false
-});
-
 // Adding tile layer
 let dark = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
@@ -15,7 +6,49 @@ let dark = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
   zoomOffset: -1,
   id: "mapbox/dark-v10",
   accessToken: API_KEY
-}).addTo(myMap);
+}); //.addTo(myMap);
+
+let grayscale = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+  attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  id: "mapbox/light-v10",
+  accessToken: API_KEY
+});
+
+
+let populationMarkers = []
+
+
+function markers(pop) {
+  worldjsonall.forEach(country=>{
+    populationMarkers.push(
+      L.marker(feature.properties.Location).bindPopup(`<h4>Country: ${feature.properties.NAME}</h4> <hr> <p>Latest year of recorded data: ${feature.properties.year}</p><p>Population: ${feature.properties.population}</p>`)
+    )
+  })
+};
+
+let populationLayer = L.layerGroup(populationMarkers)
+
+// Creating map object
+var myMap = L.map("world-map", {
+  center: [20.866667, -1.566667],
+  zoom: 1.5,
+  layers: [dark, populationLayer]
+});
+
+// Only one base layer can be shown at a time
+var baseMaps = {
+  Dark: dark,
+  Grayscale: grayscale
+}
+
+let overlayMaps = {
+  Population: populationLayer
+}
+
+L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
 
 // Load in GeoJson data
@@ -30,14 +63,15 @@ let dark = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
 // console.log("One feature",data.features[0]);
 
 function getColor(rate) {
-  return rate > 30 ? '#0c2c84' :
-    rate > 25 ? '#225ea8' :
-      rate > 20 ? '#1d91c0' :
-        rate > 15 ? '#41b6c4' :
-          rate > 10 ? '#7fcdbb' :
-            rate > 5 ? '#c7e9b4' :
-              rate > 0 ? '#ffffcc' :
-                '#ffffcc';
+  return rate > 30 ? '#4d004b' :
+    rate > 25 ? '#810f7c' :
+      rate > 20 ? '#88419d' :
+        rate > 15 ? '#8c6bb1' :
+          rate > 10 ? '#8c96c6' :
+            rate > 5 ? '#9ebcda' :
+              rate > 0 ? '#bfd3e6' :
+                rate === "No data" ? '#e0ecf4' :
+                  '#f7fcfd';
 } // END of getColor
 
 function style(feature) {
@@ -51,7 +85,7 @@ function style(feature) {
   };
 } // END function style (map stroke)
 
-L.geoJson(worldjson, { style: style }).addTo(myMap);
+L.geoJson(worldjsonall, { style: style }).addTo(myMap);
 
 function highlightFeature(e) {
   var layer = e.target;
@@ -91,10 +125,10 @@ function onEachFeature(feature, layer) {
     // popup: addPopup
 
   });
-  layer.bindPopup(`<h4>Country: ${feature.properties.Country}</h4> <hr> <p>Latest year of recorded data: ${feature.properties.year}</p><p>Population: ${feature.properties.poulation}</p>`)
+  //layer.bindPopup(`<h4>Country: ${feature.properties.NAME}</h4> <hr> <p>Latest year of recorded data: ${feature.properties.year}</p><p>Population: ${feature.properties.population}</p>`)
 }
 
-let geojson = L.geoJson(worldjson, {
+let geojson = L.geoJson(worldjsonall, {
   style: style,
   onEachFeature: onEachFeature
 }).addTo(myMap); //END of geoJson
@@ -110,7 +144,7 @@ info.onAdd = function (myMap) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
   this._div.innerHTML = '<h4>Country:</h4>' + (props ?
-    '<b>' + props.Country + '<hr>' + '<h4>Latest year of recorded data:</h4>' + props.year + '<h4>Suicide Rate:</h4>' + props.SuicideRate + '%'
+    '<b>' + props.NAME + '<hr>' + '<h4>Latest year of recorded data:</h4>' + props.year + '<h4>Suicide Rate:</h4>' + props.SuicideRate + '%'
     : 'Hover over a country');
 };
 
@@ -123,7 +157,7 @@ info.addTo(myMap);
 var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [0, 5, 10, 15, 20, 25, 30],
+    grades = ["No data", 0, 5, 10, 15, 20, 25, 30],
     labels = [];
 
   // loop through our density intervals and generate a label with a colored square for each interval

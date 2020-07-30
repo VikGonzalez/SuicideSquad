@@ -8,24 +8,15 @@
     background-color: hsl(204, 100%, 89%);
 }
 
-/* .leaflet-container{
-    background-color: white;
-} */
-
-/* p {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    text-align: center;
-} */
 
 h4 {
     font-family: 'Playfair Display', serif;
     text-align: left;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .info {
-    padding: 6px 8px;
+    padding: 4px 6px;
     font: 12px 'Playfair Display', serif;
     background: white;
     background: rgba(255,255,255,0.8);
@@ -39,7 +30,7 @@ h4 {
 
 .legend span, .legend label {
     display: block;
-    width: 35px;
+    width: 45px;
     height: 7px;
     float: left;
     opacity: 0.7;
