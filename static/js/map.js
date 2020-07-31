@@ -23,7 +23,7 @@ let gdpLayer = L.layerGroup()
 
 // Defining style for population marker
 var populationIcon = L.icon({
-  iconUrl: '../resources/Images/images/yellow_dot.svg.png',
+  iconUrl: 'resources/Images/images/yellow_dot.svg.png',
   
   iconSize:     [10, 10], // size of the icon
   iconOpacity: 0.7
@@ -42,7 +42,7 @@ for (let i = 0; i < worldjsonall.features.length; i++) {
 
 // Defining style for gdp marker
 var gdpIcon = L.icon({
-  iconUrl: '../resources/Images/images/Basic_red_dot.png',
+  iconUrl: 'resources/Images/images/Basic_red_dot.png',
   
   iconSize:     [10, 10], // size of the icon
   iconOpacity: 0.7
