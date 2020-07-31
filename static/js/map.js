@@ -18,18 +18,46 @@ let grayscale = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
 });
 
 
-let populationMarkers = []
+let populationLayer = L.layerGroup()
+let gdpLayer = L.layerGroup()
 
+// Defining style for population marker
+var populationIcon = L.icon({
+  iconUrl: '../resources/Images/images/yellow_dot.svg.png',
+  
+  iconSize:     [10, 10], // size of the icon
+  iconOpacity: 0.7
+});
 
-function markers(pop) {
-  worldjsonall.forEach(country=>{
-    populationMarkers.push(
-      L.marker(feature.properties.Location).bindPopup(`<h4>Country: ${feature.properties.NAME}</h4> <hr> <p>Latest year of recorded data: ${feature.properties.year}</p><p>Population: ${feature.properties.population}</p>`)
-    )
-  })
-};
+// Define population marker
+for (let i = 0; i < worldjsonall.features.length; i++) {
+  let country = Object.assign({}, worldjsonall.features[i])
+  console.log(country)
+  if (country.properties.Location !== "No data"){
+    let marker = L.marker([country.properties.LAT,country.properties.LON],{icon: populationIcon}).bindPopup(`<h4>Country: ${country.properties.NAME}</h4> <hr> <p>Latest year of recorded data: ${country.properties.year}</p><h4>Population: ${country.properties.population}</h4>`)
+    marker.addTo(populationLayer)
+    
+  }
+}
 
-let populationLayer = L.layerGroup(populationMarkers)
+// Defining style for gdp marker
+var gdpIcon = L.icon({
+  iconUrl: '../resources/Images/images/Basic_red_dot.png',
+  
+  iconSize:     [10, 10], // size of the icon
+  iconOpacity: 0.7
+});
+
+// Define gdp marker
+for (let i = 0; i < worldjsonall.features.length; i++) {
+  let country = Object.assign({}, worldjsonall.features[i])
+  console.log(country)
+  if (country.properties.Location !== "No data"){
+    let marker = L.marker([country.properties.LAT,country.properties.LON],{icon: gdpIcon}).bindPopup(`<h4>Country: ${country.properties.NAME}</h4> <hr> <p>Latest year of recorded data: ${country.properties.year}</p><h4>GDP PER CAPITA: ${country.properties.gdp_per_capita}</h4>`)
+    marker.addTo(gdpLayer)
+    
+  }
+}
 
 // Creating map object
 var myMap = L.map("world-map", {
@@ -45,7 +73,8 @@ var baseMaps = {
 }
 
 let overlayMaps = {
-  Population: populationLayer
+  Population: populationLayer,
+  GDP: gdpLayer
 }
 
 L.control.layers(baseMaps, overlayMaps).addTo(myMap);
@@ -101,7 +130,6 @@ function resetHighlight(e) {
 
   info.update();
 }
-
 
 
 function onEachFeature(feature, layer) {
