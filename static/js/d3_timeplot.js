@@ -87,7 +87,7 @@ function makeResponsive() {
     // ///////////////////////////////////
 
 function init() {
-    d3.json("../../Data/suicide_data.json").then(function(sData, err) {
+    d3.json("Data/suicide_data.json").then(function(sData, err) {
        if (err) throw err;
         let list_of_countries = [];
         let list_of_codes = [];
