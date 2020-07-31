@@ -1,5 +1,5 @@
 // Specify # of countries to plot for top/low traces (ie., top 10)
-const noPlot = 10;
+const noPlot = 12;
 
 //Select dropdown for plotly
 let selection = d3.select("#plotDataset");
@@ -43,7 +43,7 @@ d3.csv("Data/latest_data_available.csv").then(function(data){
 
     //Trace #1: Happiest nations
     let bubbleTrace1 = {
-    name: "Top 10 Happiest Nations",
+    name:`Top ${noPlot} Happiest Nations`,
     x: top.map(d=> d["gdp_per_capita ($)"]),
     y: top.map(d=> d["total suicides/100k pop"]),
     text: top.map(d=>d.Code),
@@ -63,7 +63,7 @@ d3.csv("Data/latest_data_available.csv").then(function(data){
     
     //Trace #2: Least happiest nations
     let bubbleTrace2 = {
-        name: "10 Least Happiest Nations",
+        name: `${noPlot} Least Happiest Nations`,
         x: low.map(d=> d["gdp_per_capita ($)"]),
         y: low.map(d=> d["total suicides/100k pop"]),
         text: low.map(d=>d.Code),
@@ -122,7 +122,7 @@ d3.csv("Data/latest_data_available.csv").then(function(data){
         text: "Comparing Happiest to Least Happiest Nations",
         font: {size:30, family: "Arial"}
     },
-    xaxis: {title: "<b>gdp per capita ($)</b>"},
+    xaxis: {title: "<b>gdp per capita ($USD) (same yr as suicide data)</b>"},
     yaxis: {title: "<b>total suicides/100k pop</b>"},
     width: window.innerWidth*0.8,
     height: window.innerHeight*0.8,
