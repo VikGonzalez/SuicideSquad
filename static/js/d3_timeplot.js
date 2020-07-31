@@ -566,7 +566,7 @@ function init() {
 init()
 
 function optionChanged() {
-  d3.json("../../Data/suicide_data.json").then(function(sData, err) {
+  d3.json("Data/suicide_data.json").then(function(sData, err) {
      if (err) throw err;
 
         let countryData = [];
