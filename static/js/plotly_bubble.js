@@ -6,7 +6,7 @@ let selection = d3.select("#plotDataset");
 
 function plotlyInit(){
 // Read CSV of latest available data          
-d3.csv("../../Data/latest_data_available.csv").then(function(data){
+d3.csv("Data/latest_data_available.csv").then(function(data){
 
         //Pull CSV and sort by happiness ranking (highest placement to lowest)    
         let x = [];
@@ -155,7 +155,7 @@ plotlyInit()
 function plotlyChanged (){
     let selection = d3.select("#plotDataset");
     // Pull in JSON and once loading is complete perform the following:
-    d3.csv("../../Data/latest_data_available.csv").then(function(data){
+    d3.csv("Data/latest_data_available.csv").then(function(data){
 
         //Format entries from strings to intgers/floats
         data.forEach(d=> {
