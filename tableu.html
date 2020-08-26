@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>World Map</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- Link Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <!--D3 cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+    <!-- Import D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style_map.css">
+
+</head>
+
+<!-- Set Body -->
+
+<body>
+    <!-- Import Navbar from Bootstrap -->
+    <!-- Set dark navbar -->
+    <!-- Stick Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top sps sps--abv">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="resources/Images/logos/Suicide Awareness Logo.png" alt="">
+            </a>
+            <h1>Suicide Analysis 1987-2016</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Set Pages -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="graphic.html">Graphic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="slider.html">Slider</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="tableu.html">Mexico Analysis</a>
+                    </li>
+                    <!-- Set Dropdown Page Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plots
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="MexicoSuicideFemalesRate.html">Mexico Female Rate</a>
+                            <a class="dropdown-item" href="MexicoSuicideFemalesCorrelation.html">Mexico Female
+                                Correlation</a>
+                            <a class="dropdown-item" href="MexicoSuicideFemalesDistribution.html">Mexico Female
+                                Distribution</a>
+                            <a class="dropdown-item" href="MexicoSuicideFemalesOutliers.html">Mexico Female Outliers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gethelp.html">Get Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Set Main Section -->
+    <main>
+        <!--container -->
+        <div class='tableauPlaceholder' id='viz1598406877074' style='position: relative'><noscript><a href='#'><img
+                        alt=' '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MexicoSuicideRates&#47;MexicoSuicideRates&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' width='100%' height='100%'
+                style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='MexicoSuicideRates&#47;MexicoSuicideRates' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MexicoSuicideRates&#47;MexicoSuicideRates&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en' /></object></div>
+        <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1598406877074'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '320px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '787px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '320px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '787px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1177px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class='tableauPlaceholder' id='viz1598409941830' style='position: relative'><noscript><a href='#'><img
+                        alt=' '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MexicoSuicideRates&#47;StateMatrix&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' width='100%' height='100%' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='MexicoSuicideRates&#47;StateMatrix' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MexicoSuicideRates&#47;StateMatrix&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en' /></object></div>
+        <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1598409941830'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '787px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '100%'; vizElement.style.minHeight = '787px'; vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1177px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </main>
+
+
+    <!-- Set Footer -->
+    <!-- Include Social Media Icons -->
+    <section class="height-top-down"></section>
+    <footer>
+        <img class="logo" src="resources/Images/logos/Suicide Awareness Logo.png" alt="logo">
+        <br>
+        <p>GET HELP</p>
+        <p>01-800-LETSTALK</p>
+        <img class="iconsSM" src="resources/Images/logos/facebook-logo-button.svg" alt="Facebook">
+        <img class="iconsSM" src="resources/Images/logos/instagram-logo.svg" alt="Instagram">
+        <img class="iconsSM" src="resources/Images/logos/twitter-logo-button.svg" alt="Twitter">
+        <br>
+        <br>
+        <br>
+        <p> © Copyright Data Bootcamp 2020</p>
+        <br>
+    </footer>
+
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="static/js/choropleth.js"></script>
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="static/js/config_map.js"></script>
+    <script src="static/js/world_map_allcountries.js"></script>
+    <script type="text/javascript" src="static/js/map.js"></script>
+
+    <!-- Set Menu Scroll -->
+    <script src="static/js/scrollPosStyler.min.js"></script>
+</body>
+
+</html>
