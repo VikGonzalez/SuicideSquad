@@ -1,0 +1,272 @@
+﻿Location,Period,DataSource,Indicator,Dim1,First Tooltip
+Mexico,2018,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.25 [2.8-5.75]
+Mexico,2018,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.72 [2.26-5.2]
+Mexico,2018,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19 [0.1-0.26]
+Mexico,2018,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.19 [0.12-0.27]
+Mexico,2018,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.15 [0.096-0.22]
+Mexico,2017,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.25 [2.71-5.71]
+Mexico,2017,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.72 [2.18-5.16]
+Mexico,2017,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19 [0.12-0.27]
+Mexico,2017,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.19 [0.12-0.28]
+Mexico,2017,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.15 [0.094-0.21]
+Mexico,2016,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.25 [2.82-5.65]
+Mexico,2016,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.72 [2.29-5.13]
+Mexico,2016,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19 [0.12-0.27]
+Mexico,2016,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.19 [0.11-0.27]
+Mexico,2016,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.15 [0.099-0.21]
+Mexico,2015,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.24 [2.89-5.67]
+Mexico,2015,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.59 [2.23-5.02]
+Mexico,2015,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.2 [0.12-0.27]
+Mexico,2015,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.24 [0.14-0.33]
+Mexico,2015,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.21 [0.13-0.3]
+Mexico,2014,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.94 [2.66-5.31]
+Mexico,2014,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.38 [2.12-4.74]
+Mexico,2014,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.18 [0.11-0.25]
+Mexico,2014,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.24 [0.14-0.33]
+Mexico,2014,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.15 [0.089-0.2]
+Mexico,2013,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.81 [2.5-5.01]
+Mexico,2013,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.28 [2-4.47]
+Mexico,2013,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.2 [0.12-0.28]
+Mexico,2013,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.19 [0.11-0.27]
+Mexico,2013,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.14 [0.082-0.2]
+Mexico,2012,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.86 [2.57-5.16]
+Mexico,2012,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.41 [2.09-4.73]
+Mexico,2012,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19 [0.11-0.26]
+Mexico,2012,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.12 [0.075-0.17]
+Mexico,2012,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.13 [0.077-0.18]
+Mexico,2011,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4 [2.53-5.41]
+Mexico,2011,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.53 [2.06-4.92]
+Mexico,2011,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.18 [0.11-0.26]
+Mexico,2011,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.18 [0.11-0.25]
+Mexico,2011,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.11 [0.066-0.15]
+Mexico,2010,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.05 [2.63-5.39]
+Mexico,2010,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.53 [2.12-4.86]
+Mexico,2010,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.18 [0.1-0.25]
+Mexico,2010,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.23 [0.14-0.31]
+Mexico,2010,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.11 [0.067-0.15]
+Mexico,2009,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.37 [2.93-5.74]
+Mexico,2009,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.83 [2.37-5.19]
+Mexico,2009,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19 [0.12-0.26]
+Mexico,2009,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.26 [0.15-0.35]
+Mexico,2009,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.093 [0.06-0.13]
+Mexico,2008,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.27 [2.85-5.76]
+Mexico,2008,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.68 [2.25-5.21]
+Mexico,2008,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.21 [0.13-0.29]
+Mexico,2008,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.28 [0.18-0.4]
+Mexico,2008,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.098 [0.057-0.14]
+Mexico,2007,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.24 [2.67-5.74]
+Mexico,2007,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.76 [2.2-5.25]
+Mexico,2007,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.2 [0.12-0.28]
+Mexico,2007,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.23 [0.14-0.32]
+Mexico,2007,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.052 [0.03-0.071]
+Mexico,2006,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.2 [3.58-6.67]
+Mexico,2006,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,4.01 [2.45-5.4]
+Mexico,2006,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.088 [0.053-0.12]
+Mexico,2006,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.05 [0.62-1.43]
+Mexico,2006,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.051 [0.031-0.073]
+Mexico,2005,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.03 [3.46-6.63]
+Mexico,2005,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.89 [2.43-5.44]
+Mexico,2005,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.089 [0.055-0.12]
+Mexico,2005,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1 [0.61-1.4]
+Mexico,2005,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.031-0.067]
+Mexico,2004,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5 [3.26-6.64]
+Mexico,2004,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.8 [2.22-5.33]
+Mexico,2004,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.11 [0.068-0.15]
+Mexico,2004,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.05 [0.61-1.47]
+Mexico,2004,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.03-0.067]
+Mexico,2003,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.01 [3.56-6.61]
+Mexico,2003,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.77 [2.44-5.35]
+Mexico,2003,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.11 [0.068-0.15]
+Mexico,2003,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.08 [0.68-1.48]
+Mexico,2003,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.029-0.068]
+Mexico,2002,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.92 [3.42-6.38]
+Mexico,2002,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.69 [2.17-5.14]
+Mexico,2002,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.09 [0.056-0.12]
+Mexico,2002,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.1 [0.65-1.47]
+Mexico,2002,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.03-0.067]
+Mexico,2001,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.02 [3.45-6.46]
+Mexico,2001,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.74 [2.26-5.16]
+Mexico,2001,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.091 [0.058-0.13]
+Mexico,2001,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.15 [0.73-1.6]
+Mexico,2001,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.03-0.067]
+Mexico,2000,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.16 [3.62-6.73]
+Mexico,2000,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.76 [2.28-5.27]
+Mexico,2000,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.091 [0.056-0.13]
+Mexico,2000,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.26 [0.74-1.73]
+Mexico,2000,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.049 [0.031-0.07]
+Mexico,1999,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.85
+Mexico,1999,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.79
+Mexico,1999,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1999,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.06
+Mexico,1999,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1998,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.88
+Mexico,1998,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.73
+Mexico,1998,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1998,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.07
+Mexico,1998,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.04
+Mexico,1997,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.76
+Mexico,1997,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.69
+Mexico,1997,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1997,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.08
+Mexico,1997,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1996,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.26
+Mexico,1996,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,4.13
+Mexico,1996,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1996,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.08
+Mexico,1996,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.01
+Mexico,1995,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.14
+Mexico,1995,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.96
+Mexico,1995,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1995,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.09
+Mexico,1995,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.05
+Mexico,1994,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.18
+Mexico,1994,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.91
+Mexico,1994,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1994,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.26
+Mexico,1994,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1993,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.23
+Mexico,1993,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.99
+Mexico,1993,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.03
+Mexico,1993,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.27
+Mexico,1993,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1992,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.27
+Mexico,1992,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.75
+Mexico,1992,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.05
+Mexico,1992,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.44
+Mexico,1992,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.03
+Mexico,1991,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.84
+Mexico,1991,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.56
+Mexico,1991,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.02
+Mexico,1991,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.29
+Mexico,1991,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1990,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.89
+Mexico,1990,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.51
+Mexico,1990,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1990,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.3
+Mexico,1990,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.04
+Mexico,1989,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,5.1
+Mexico,1989,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.57
+Mexico,1989,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1989,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.48
+Mexico,1989,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.01
+Mexico,1988,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.49
+Mexico,1988,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.16
+Mexico,1988,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1988,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.33
+Mexico,1988,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1987,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.7
+Mexico,1987,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.05
+Mexico,1987,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1987,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.51
+Mexico,1987,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.08
+Mexico,1986,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.43
+Mexico,1986,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.97
+Mexico,1986,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1986,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.36
+Mexico,1986,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.04
+Mexico,1985,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.45
+Mexico,1985,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.8
+Mexico,1985,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1985,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.54
+Mexico,1985,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.05
+Mexico,1984,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.38
+Mexico,1984,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.68
+Mexico,1984,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.1
+Mexico,1984,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.56
+Mexico,1984,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.04
+Mexico,1983,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.33
+Mexico,1983,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.71
+Mexico,1983,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1983,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.57
+Mexico,1983,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1982,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.51
+Mexico,1982,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.17
+Mexico,1982,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1982,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.28
+Mexico,1982,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.02
+Mexico,1981,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.76
+Mexico,1981,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.32
+Mexico,1981,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1981,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.39
+Mexico,1981,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0
+Mexico,1980,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.52
+Mexico,1980,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.21
+Mexico,1980,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1980,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.21
+Mexico,1980,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Other alcoholic beverages,0.04
+Mexico,1979,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.33
+Mexico,1979,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,3.15
+Mexico,1979,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1979,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.14
+Mexico,1978,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.04
+Mexico,1978,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.89
+Mexico,1978,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1978,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.1
+Mexico,1977,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.29
+Mexico,1977,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.86
+Mexico,1977,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1977,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.39
+Mexico,1976,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,4.04
+Mexico,1976,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.68
+Mexico,1976,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1976,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.32
+Mexico,1975,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.87
+Mexico,1975,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.78
+Mexico,1975,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1975,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.05
+Mexico,1974,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.75
+Mexico,1974,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.89
+Mexico,1974,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1974,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.82
+Mexico,1973,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.45
+Mexico,1973,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.61
+Mexico,1973,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1973,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.79
+Mexico,1972,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.29
+Mexico,1972,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.34
+Mexico,1972,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1972,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.89
+Mexico,1971,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.12
+Mexico,1971,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.04
+Mexico,1971,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1971,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.03
+Mexico,1970,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.38
+Mexico,1970,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.36
+Mexico,1970,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1970,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.96
+Mexico,1969,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.46
+Mexico,1969,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.33
+Mexico,1969,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1969,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.09
+Mexico,1968,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.41
+Mexico,1968,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.21
+Mexico,1968,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1968,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.16
+Mexico,1967,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.47
+Mexico,1967,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.23
+Mexico,1967,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1967,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,1.2
+Mexico,1966,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.14
+Mexico,1966,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.18
+Mexico,1966,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1966,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.91
+Mexico,1965,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,3.12
+Mexico,1965,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.14
+Mexico,1965,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.06
+Mexico,1965,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.93
+Mexico,1964,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,2.93
+Mexico,1964,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,2.04
+Mexico,1964,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1964,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.85
+Mexico,1963,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,2.6
+Mexico,1963,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,1.74
+Mexico,1963,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.04
+Mexico,1963,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.81
+Mexico,1962,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,2.77
+Mexico,1962,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,1.78
+Mexico,1962,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.19
+Mexico,1962,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.8
+Mexico,1961,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",All types,2.81
+Mexico,1961,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Beer,1.84
+Mexico,1961,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Wine,0.2
+Mexico,1961,Data source,"Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)",Spirits,0.77
