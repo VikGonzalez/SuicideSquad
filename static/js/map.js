@@ -159,7 +159,7 @@ info.onAdd = function (myMap) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
   this._div.innerHTML = '<h4>Country:</h4>' + (props ?
-    '<b>' + props.NAME + '<hr>' + '<h4>Latest year of recorded data:</h4>' + props.year + '<h4>Suicide Rate:</h4>' + props.SuicideRate + '%'
+    '<b>' + props.NAME + '<hr>' + '<h4>Latest year of recorded data:</h4>' + props.year + '<h4>Suicide Rate:</h4>' + props.SuicideRate
     : 'Hover over a country');
 };
 
