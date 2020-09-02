@@ -97,14 +97,14 @@ Plotly.d3.csv('Data/DataFiveYear.csv', function (err, data) {
   var layout = {
     xaxis: {
       title: 'Life Expectancy',
-      range: [30, 85]
+      range: [25, 85]
     },
     yaxis: {
       title: 'GDP per Capita',
       type: 'log'
     },
     hovermode: 'closest',
-     // We'll use updatemenus (whose functionality includes menus as
+     // We'll use update menus (whose functionality includes menus as
      // well as buttons) to create a play button and a pause button.
      // The play button works by passing `null`, which indicates that
      // Plotly should animate all frames. The pause button works by
