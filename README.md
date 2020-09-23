@@ -1,3 +1,5 @@
 # SuicideSquad
-Project2 by Team3
-Project3 by Team3
+
+Final Project.
+
+Link to HEROKU APP: https://suicide-analysis-project.herokuapp.com/
