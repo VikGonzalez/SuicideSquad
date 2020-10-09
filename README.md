@@ -19,8 +19,8 @@ Here’s a breakdown of our website’s tabular organization:
 
 # Machine Learning (link)
 
-Approach:
+## Approach:
 ![Implementation](/resources/Images/images/ML_shot.png)
 
-Summary of Results:
+## Summary of Results:
 ![Summary](/resources/Images/images/results_shot.png)
