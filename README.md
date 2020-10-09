@@ -17,7 +17,8 @@ Here’s a breakdown of our website’s tabular organization:
 
 **“Unemployment & Obesity” + “Divorces, Alcohol & Migration”** – Tableau views of other negative indicators that could contribute to the impact of suicide in Mexico. These indicators are used in the machine learning portion of this project
 
-# Machine Learning ([GitHub](https://github.com/VikGonzalez/SuicideSquad/blob/master/Power%20Point%20Machine%20Learning/SuicideMexModel.pptx?raw=true)
+# Machine Learning
+### [Link to presentation in GitHUB](https://github.com/VikGonzalez/SuicideSquad/blob/master/Power%20Point%20Machine%20Learning/SuicideMexModel.pptx?raw=true)
 
 ## Approach:
 ![Implementation](/resources/Images/images/ML_shot.png)
